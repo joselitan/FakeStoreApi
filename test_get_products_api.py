@@ -13,7 +13,7 @@ def test_assert_amount_of_products():
     logging.info(f"Number of Products: {len(products)}")
     assert len(products) == 20, "Expected 20 products in the response"
 
-def test_assert_specific_product_return_items():
+def test_assert_specific_product_return_fields():
     product_id = 2
     response = requests.get(f"https://fakestoreapi.com/products/{product_id}")
     product = response.json()
@@ -21,6 +21,7 @@ def test_assert_specific_product_return_items():
     assert "title" in product, "Product title is missing"
     assert "price" in product, "Product price is missing"
     assert "category" in product, "Product category is missing"
+    assert "title" in product, "Product title is missing"
     
 
 def test_assert_specific_productId_correct_data():
