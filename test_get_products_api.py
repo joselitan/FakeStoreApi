@@ -21,7 +21,7 @@ def test_assert_specific_product_return_fields():
     assert "title" in product, "Product title is missing"
     assert "price" in product, "Product price is missing"
     assert "category" in product, "Product category is missing"
-    assert "title" in product, "Product title is missing"
+  
     
 
 def test_assert_specific_productId_correct_data():
